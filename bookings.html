@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Morya | Book Your Bappa</title>
+
+    <link rel="stylesheet" href="css/booking.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+    <div class="logo">
+        Morya
+    </div>
+
+    <div class="nav-links">
+
+        <a href="login.html">
+            Login
+        </a>
+
+        <a href="register.html">
+            Register
+        </a>
+
+        <a href="bookings.html" class="active">
+            Book Now
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- =========================
+         MAIN BOOKING SECTION
+    ========================== -->
+
+    <main class="booking-container">
+
+
+        <!-- LEFT : IDOL DETAILS -->
+
+        <section class="idol-section">
+
+
+            <div class="small-heading">
+                YOUR BAPPA IS WAITING
+            </div>
+
+
+            <h1>
+                Book Your
+                <span>Bappa</span>
+            </h1>
+
+
+            <p class="intro-text">
+                Complete the form to reserve your favourite
+                Ganpati idol and make your celebration special.
+            </p>
+
+
+            <!-- Idol Preview -->
+
+            <div class="idol-card">
+
+                <div class="idol-placeholder">
+                    ॐ
+                </div>
+
+
+                <div class="idol-info">
+
+                    <span class="idol-label">
+                        SELECTED IDOL
+                    </span>
+
+                    <h2 id="selectedIdol">
+                        Choose an idol
+                    </h2>
+
+                    <p id="selectedIdolDescription">
+                        Select an idol from the booking form.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Booking Benefits -->
+
+            <div class="booking-benefits">
+
+                <div>
+
+                    <strong>
+                        ✓ Secure Booking
+                    </strong>
+
+                    <small>
+                        Your booking details are safe
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        ✓ Easy Process
+                    </strong>
+
+                    <small>
+                        Quick and simple booking
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT : BOOKING FORM -->
+
+        <section class="booking-card">
+
+
+            <!-- Card Heading -->
+
+            <div class="card-heading">
+
+                <div class="om-small">
+                    ॐ
+                </div>
+
+                <h2>
+                    Booking Details
+                </h2>
+
+                <p>
+                    Enter your details to book your idol
+                </p>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="bookingForm">
+
+
+                <!-- NAME + MOBILE -->
+
+                <div class="form-row">
+
+
+                    <div class="input-box">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                        <small
+                            class="error"
+                            id="nameError"
+                        ></small>
+
+                    </div>
+
+
+
+                    <div class="input-box">
+
+                        <label for="mobile">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="10 digit mobile number"
+                            required
+                        >
+
+                        <small
+                            class="error"
+                            id="mobileError"
+                        ></small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="input-box">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <small
+                        class="error"
+                        id="emailError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- IDOL + QUANTITY -->
+
+                <div class="form-row">
+
+
+                    <div class="input-box">
+
+                        <label for="idol">
+                            Select Idol
+                        </label>
+
+                        <select
+                            id="idol"
+                            name="idol"
+                            required
+                        >
+
+                            <option value="">
+                                Choose an idol
+                            </option>
+
+                            <option value="eco">
+                                Eco-Friendly Ganpati
+                            </option>
+
+                            <option value="royal">
+                                Royal Ganpati
+                            </option>
+
+                            <option value="traditional">
+                                Traditional Ganpati
+                            </option>
+
+                            <option value="bal">
+                                Bal Ganesh
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="input-box">
+
+                        <label for="quantity">
+                            Quantity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            max="5"
+                            value="1"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOOKING DATE -->
+
+                <div class="input-box">
+
+                    <label for="date">
+                        Booking Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="booking_date"
+                        required
+                    >
+
+                    <small
+                        class="error"
+                        id="dateError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- DELIVERY OPTION -->
+
+                <div class="input-box">
+
+                    <label>
+                        Delivery / Pickup
+                    </label>
+
+
+                    <div class="radio-group">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="delivery"
+                                value="delivery"
+                                required
+                            >
+
+                            <span>
+                                Home Delivery
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="delivery"
+                                value="pickup"
+                            >
+
+                            <span>
+                                Store Pickup
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADDRESS -->
+
+                <div class="input-box">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+                    <small
+                        class="error"
+                        id="addressError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- SPECIAL REQUIREMENTS -->
+
+                <div class="input-box">
+
+                    <label for="requirements">
+
+                        Special Requirements
+
+                        <span>
+                            (Optional)
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="requirements"
+                        name="requirements"
+                        rows="2"
+                        placeholder="Any special requirements..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="booking-btn"
+                >
+                    Confirm Booking
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <div
+        id="successMessage"
+        class="success-message"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h3>
+            Booking Confirmed!
+        </h3>
+
+        <p>
+            Your Ganpati idol has been booked successfully.
+        </p>
+
+        <button onclick="closeMessage()">
+            Continue
+        </button>
+
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
